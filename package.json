@@ -1,12 +1,15 @@
 {
+  "homepage": "https://ayushtivary.github.io/food-app",
   "name": "react-learning",
   "version": "1.0.0",
   "description": "This is part of react learning",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
     "test": "jest",
     "start": "parcel index.html",
-    "build": "parcel build index.html"
+    "build": "parcel build index.html",
+    "predeploy" : "npm run build",
+   "deploy" : "gh-pages -d build"
   },
   "author": "",
   "license": "ISC",
@@ -24,5 +27,16 @@
     "react-redux": "^9.1.2",
     "react-router": "^6.26.0",
     "react-router-dom": "^6.11.2"
+  },
+  "targets": {
+  "main": {
+    "context": "browser",
+    "distDir": "./dist",
+    "sourceMap": true,
+    "engines": {
+      "browsers": "> 0.25%, not dead"
+    }
   }
+}
+
 }
